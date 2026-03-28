@@ -38,7 +38,7 @@ export const addComment = async (
     await addDoc(commentsCol(postId), {
       ...data,
       postId,
-      isApproved: false,
+      isApproved: true,
       createdAt: Timestamp.now(),
     })
   } catch (err) {

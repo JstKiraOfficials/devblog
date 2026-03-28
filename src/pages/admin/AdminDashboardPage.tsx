@@ -28,7 +28,7 @@ const StatCard = ({
 
 const AdminDashboardPage = () => {
   const qc = useQueryClient()
-  const [commentsOpen, setCommentsOpen] = useState(false)
+  const [commentsOpen, setCommentsOpen] = useState(true)
 
   const { data: posts = [], isLoading: postsLoading } = useQuery({
     queryKey: ['posts', 'admin', 'all'],

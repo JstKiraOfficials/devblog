@@ -38,7 +38,7 @@ export const CommentForm = ({ postId, parentId = null, onSuccess, onCancel }: Co
   if (submitted) {
     return (
       <div className="p-4 rounded-[var(--radius-md)] bg-green-500/10 border border-green-500/20 text-green-400 text-sm">
-        Your comment is awaiting moderation. Thank you!
+        Comment posted successfully. Thank you!
       </div>
     )
   }

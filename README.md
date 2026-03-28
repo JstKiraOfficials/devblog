@@ -72,7 +72,7 @@ A full-featured personal technical blog platform built with React, TypeScript, a
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/yourusername/devblog.git
+git clone https://github.com/jstkiraofficials/devblog.git
 cd devblog
 npm install
 ```
