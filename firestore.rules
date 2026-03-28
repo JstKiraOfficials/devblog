@@ -21,9 +21,8 @@ service cloud.firestore {
 
       // Comments: public create (pending approval), public read (approved only)
       match /comments/{commentId} {
-        allow read: if resource.data.isApproved == true || isAdmin();
-        allow create: if request.resource.data.keys().hasAll(['authorName', 'content', 'createdAt'])
-          && request.resource.data.isApproved == false;
+        allow read: if true;
+        allow create: if request.resource.data.keys().hasAll(['authorName', 'content', 'createdAt']);
         allow update: if isAdmin();
         allow delete: if isAdmin();
       }
