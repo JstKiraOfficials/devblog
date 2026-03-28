@@ -1,7 +1,7 @@
 # DevBlog
 
 [![Live Demo](https://img.shields.io/badge/demo-live-orange?style=flat-square&logo=vercel)](https://yourdomain.com)
-[![GitHub](https://img.shields.io/badge/github-repo-black?style=flat-square&logo=github)](https://github.com/yourusername/devblog)
+[![GitHub](https://img.shields.io/badge/github-repo-black?style=flat-square&logo=github)](https://github.com/JstKiraOfficials/devblog)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)](https://typescriptlang.org)
 [![Firebase](https://img.shields.io/badge/Firebase-10-FFCA28?style=flat-square&logo=firebase)](https://firebase.google.com)
@@ -183,7 +183,7 @@ Open [http://localhost:5173](http://localhost:5173)
 
 ### Vercel (recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/devblog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JstKiraOfficials/devblog)
 
 1. Push your repo to GitHub
 2. Import it at [vercel.com/new](https://vercel.com/new)
@@ -223,4 +223,4 @@ src/
 
 ## License
 
-MIT
+Built by [Ibrahim Abdulbasit Ayomide (Jst Kira)](https://github.com/JstKiraOfficials) · MIT License
