@@ -1,0 +1,26 @@
+/* Custom highlight.js theme — dark with orange brand accents */
+.hljs {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  border-radius: var(--radius-md);
+}
+.hljs-keyword,
+.hljs-selector-tag  { color: #FF8C38; }
+.hljs-string,
+.hljs-attr          { color: #86EFAC; }
+.hljs-comment       { color: #555555; font-style: italic; }
+.hljs-number        { color: #FDA4AF; }
+.hljs-function,
+.hljs-title         { color: #93C5FD; }
+.hljs-variable,
+.hljs-name          { color: #E4E4E7; }
+.hljs-type,
+.hljs-class         { color: #FCD34D; }
+.hljs-operator      { color: #FF6B00; }
+.hljs-punctuation   { color: #A0A0A0; }
+.hljs-tag           { color: #FF8C38; }
+.hljs-built_in      { color: #93C5FD; }
+.hljs-literal       { color: #FDA4AF; }
+.hljs-meta          { color: #A0A0A0; }
+.hljs-deletion      { color: #EF4444; }
+.hljs-addition      { color: #22C55E; }

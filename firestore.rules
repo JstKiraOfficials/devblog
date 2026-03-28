@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null;
+    }
+
+    // Posts: public read for published, admin read/write all
+    match /posts/{postId} {
+      allow read: if resource.data.status == 'published' || isAdmin();
+      allow create, update, delete: if isAdmin();
+
+      // Reactions: public create (once per session per type), public read
+      match /reactions/{reactionId} {
+        allow read: if true;
+        allow create: if request.resource.data.keys().hasAll(['type', 'sessionId', 'createdAt'])
+          && request.resource.data.type in ['like', 'love', 'fire', 'wow'];
+        allow update, delete: if false;
+      }
+
+      // Comments: public create (pending approval), public read (approved only)
+      match /comments/{commentId} {
+        allow read: if resource.data.isApproved == true || isAdmin();
+        allow create: if request.resource.data.keys().hasAll(['authorName', 'content', 'createdAt'])
+          && request.resource.data.isApproved == false;
+        allow update: if isAdmin();
+        allow delete: if isAdmin();
+      }
+    }
+
+    // Tags: public read, admin write
+    match /tags/{tagName} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Subscribers: public create, admin read
+    match /subscribers/{email} {
+      allow create: if request.resource.data.keys().hasAll(['email', 'subscribedAt', 'isVerified']);
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}
